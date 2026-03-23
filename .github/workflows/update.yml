@@ -30,6 +30,6 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add worldsp.m3u
-          git commit -m "Update worldsp.m3u" || echo "No changes to commit"
+          git add worldsp.m3u api_response_preview.json
+git commit -m "Update playlist" || echo "No change"
           git push
