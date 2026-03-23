@@ -2,7 +2,7 @@ name: Update M3U Playlist
 
 on:
   schedule:
-    - cron: '*/2 * * * *'
+    - cron: '*/7 * * * *'
   workflow_dispatch:
 
 jobs:
