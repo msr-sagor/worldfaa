@@ -1,9 +1,9 @@
 name: Update M3U Playlist
 
 on:
-  workflow_dispatch:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/7 * * * *'
+  workflow_dispatch:
 
 jobs:
   update-playlist:
@@ -23,13 +23,13 @@ jobs:
       - name: Install dependencies
         run: pip install requests
 
-      - name: Run playlist script
+      - name: Run script
         run: python create_playlist.py
 
-      - name: Commit and push playlist
+      - name: Commit and push changes
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add worldsp.m3u
-          git commit -m "Update playlist" || echo "No changes to commit"
+          git commit -m "Update worldsp.m3u" || echo "No changes to commit"
           git push
