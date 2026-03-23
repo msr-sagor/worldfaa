@@ -217,7 +217,7 @@ def get_m3u8_url(channel_url, referer):
 
 
 def get_online_channels(referer):
-    api_url = "https://api.cdn-live.tv/api/v1/channels/?user=cdnlivetv&plan=free"
+    api_url = "https://api.cdn-live.tv/api/v1/channels/?user=streamsports99&plan=vip"
     headers = {
         **DEFAULT_HEADERS,
         "Referer": referer,
